@@ -6,13 +6,15 @@ public class Automasina {
     public Motors motors;
     public Ritenis ritenis;
     public Sture sture;
+    public Atrumkarba atrumkarba;
     public int atrums, svars;
     public String razotajs, modelis;
 
-    public Automasina(Motors motors, Ritenis ritenis, Sture sture, int atrums, int svars, String razotajs, String modelis) {
+    public Automasina(Motors motors, Ritenis ritenis, Sture sture, Atrumkarba atrumkarba,  int atrums, int svars, String razotajs, String modelis) {
         this.motors = motors;
         this.ritenis = ritenis;
         this.sture = sture;
+        this.atrumkarba = atrumkarba;
         this.atrums = atrums;
         this.svars = svars;
         this.razotajs = razotajs;
@@ -20,9 +22,9 @@ public class Automasina {
     }
 
     public Automasina() {
-        motors = new Motors(virknesParbaude());
-        ritenis = new Ritenis(virknesParbaude());
-        sture = new Sture(virknesParbaude());
+//        motors = new Motors(virknesParbaude());
+//        ritenis = new Ritenis(virknesParbaude());
+//        sture = new Sture(virknesParbaude());
     }
 
     public void spiestGazi() {
@@ -48,6 +50,12 @@ public class Automasina {
                 JOptionPane.showMessageDialog(null, "Netika ievadīts skaitlis!", "Nekorekti dati", JOptionPane.ERROR_MESSAGE);
             }
         }
+    }
+
+    public void masinasInfo() {
+        JOptionPane.showMessageDialog(null, "Automašīnas motors: " + this.motors + "\n" + "Automašīnas ritenis: " + this.ritenis + "\n"
+                + "Automašīnas stūre: " + this.sture + "\n" + "Automašīnas ātrumkārba: " + this.atrumkarba + "\n" + "Automašīnas ātrums: " + this.atrums + " km/h" + "\n"
+                + "Automašīnas svars: " + this.svars + " kg" + "\n" + "Automašīnas ražotājs: " + this.razotajs + "\n" + "Automašīnas modelis: " + this.modelis + "\n", "Atribūti", JOptionPane.INFORMATION_MESSAGE);
     }
 
 }

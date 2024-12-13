@@ -39,6 +39,7 @@ public class Atrumkarba {
     public void palielinatAtrumu() {
         if (pasreizejaisAtrums < kopaAtrumi) {
             pasreizejaisAtrums++;
+            JOptionPane.showMessageDialog(null, "Ātrums palielināts par 1, tagad tu esi " + pasreizejaisAtrums + ". ātrumā");
         } else {
             JOptionPane.showMessageDialog(null, "Jau esi lielākajā ātrumā", "Kļūda", JOptionPane.ERROR_MESSAGE);
         }
@@ -47,8 +48,15 @@ public class Atrumkarba {
     public void samazinatAtrumu() {
         if (pasreizejaisAtrums > 1) {
             pasreizejaisAtrums--;
+            JOptionPane.showMessageDialog(null, "Ātrums samazināts par 1, tagad tu esi " + pasreizejaisAtrums + ". ātrumā");
+
         } else {
             JOptionPane.showMessageDialog(null, "Jau esi mazākajā ātrumā", "Kļūda", JOptionPane.ERROR_MESSAGE);
         }
+    }
+
+    public void atrumkarbasInfo() {
+        JOptionPane.showMessageDialog(null, "Ātrumkārbas veids: " + veids + "\n" + "Ātrumkārbai ir: " + kopaAtrumi + " ātrumi " + "\n"
+                + "Pašreiz automašīna brauc: " + pasreizejaisAtrums + ". ātrumā" + "\n", "Atribūti", JOptionPane.INFORMATION_MESSAGE);
     }
 }

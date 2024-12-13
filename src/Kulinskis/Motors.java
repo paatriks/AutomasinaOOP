@@ -33,13 +33,20 @@ public class Motors {
         }
     }
 
-    public String parbauditStavokli() {
-        return pielaists ? "Motors rūc" : "Motors nerūc";
+    public void parbauditStavokli() {
+        if (pielaists) JOptionPane.showMessageDialog(null, "Motors rūc", "Motors ir pielaists", JOptionPane.INFORMATION_MESSAGE);
+        else JOptionPane.showMessageDialog(null, "Motors nerūc", "Motors ir noslāpēts", JOptionPane.INFORMATION_MESSAGE);
     }
 
     public void paterins () {
         if (motoraVeids.equalsIgnoreCase("benzīns")) JOptionPane.showMessageDialog(null,"Tava auto patēriņs ir 20L", "Motora patēriņs", JOptionPane.INFORMATION_MESSAGE);
         else if (motoraVeids.equalsIgnoreCase("dīzelis")) JOptionPane.showMessageDialog(null,"Tava auto patēriņs ir 15L", "Motora patēriņs", JOptionPane.INFORMATION_MESSAGE);
         else JOptionPane.showMessageDialog(null,"Tava auto patēriņs ir 0L, iespējams tas ir elektroauto", "Motora patēriņs", JOptionPane.INFORMATION_MESSAGE);
+    }
+
+    public void motoraInfo() {
+        JOptionPane.showMessageDialog(null, "Motora tilpums: " + motoraTilpums + " litri" + "\n" + "Motora jauda: " + motoraJauda + " zirgspēki" + "\n"
+                + "Motora cilindru skaits: " + cilindri + " cilindri" + "\n" + "Motora veids: " + motoraVeids + "\n"
+                + "Motors ir pielaists: " + (pielaists ? "Jā" : "Nē") + "\n", "Atribūti", JOptionPane.INFORMATION_MESSAGE);
     }
 }
