@@ -71,6 +71,10 @@ public class DarbsArObjektiem {
                 break;
         }
 
-        JOptionPane.showMessageDialog(null, rezultats.toString(), "Objektu saraksts", JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(null, rezultats, "Objektu saraksts", JOptionPane.INFORMATION_MESSAGE);
+    }
+
+    static void dzestObjektus() {
+
     }
 }

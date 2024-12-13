@@ -55,8 +55,9 @@ public class Atrumkarba {
         }
     }
 
-    public void atrumkarbasInfo() {
-        JOptionPane.showMessageDialog(null, "Ātrumkārbas veids: " + veids + "\n" + "Ātrumkārbai ir: " + kopaAtrumi + " ātrumi " + "\n"
-                + "Pašreiz automašīna brauc: " + pasreizejaisAtrums + ". ātrumā" + "\n", "Atribūti", JOptionPane.INFORMATION_MESSAGE);
+    @Override
+    public String toString() {
+        return "Ātrumkārba (veids: " + veids + ", kopā ātrumi: " + kopaAtrumi + ", pašreizējais ātrums: " + pasreizejaisAtrums + ". ātrums" + ")";
     }
+
 }

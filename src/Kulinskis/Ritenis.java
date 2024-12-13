@@ -117,9 +117,9 @@ public class Ritenis {
         }
     }
 
-    public void ritenaInfo() {
-        JOptionPane.showMessageDialog(null, "Riteņa diametrs: " + diametrs + "\n" + "Riteņu spiediens: " + spiediens + "\n"
-                + "Automašīnas riepu tips: " + riepasTips + "\n" + "Riepu ražotājs: " + riepuRazotajs + "\n"
-                + "Automašīnai ir tikuši nomainīti riteņi: " + (jaunsRitenis ? "Jā" : "Nē") + "\n", "Atribūti", JOptionPane.INFORMATION_MESSAGE);
+    @Override
+    public String toString() {
+        return "Ritenis (diametrs: " + diametrs + " \", riepu spiediens: " + spiediens + " psi" + ", riepu tips: " + riepasTips + ", riepu ražotājs: " + riepuRazotajs +
+                ", automašīnai ir tikuši nomainīti riteņi: " + (jaunsRitenis ? "Jā" : "Nē") + ")";
     }
 }

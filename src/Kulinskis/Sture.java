@@ -39,9 +39,9 @@ public class Sture {
 
     }
 
-    public void sturesInfo() {
-        JOptionPane.showMessageDialog(null, "Stūres materiāls: " + materials + "\n" + "Stūres diametrs: " + diametrs + " cm" + "\n"
-                + "Stūres pogu skaits: " + poguSkaits + "\n" + "Stūre ir regulējama: " + (irRegulejama ? "Jā" : "Nē") + "\n"
-                + "Stūrei ir apsilde: " + (irApsilde ? "Jā" : "Nē") + "\n", "Atribūti", JOptionPane.INFORMATION_MESSAGE);
+    @Override
+    public String toString() {
+        return "Stūre (materiāls: " + materials + ", diametrs: " + diametrs + "cm" + ", pogu skaits: " + poguSkaits + ", stūre ir regulējama: " + (irRegulejama ? "Jā" : "Nē") +
+                ", stūrei ir apsilde: " + (irApsilde ? "Jā" : "Nē") + ")";
     }
 }

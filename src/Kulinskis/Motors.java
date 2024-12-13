@@ -44,9 +44,10 @@ public class Motors {
         else JOptionPane.showMessageDialog(null,"Tava auto patēriņs ir 0L, iespējams tas ir elektroauto", "Motora patēriņs", JOptionPane.INFORMATION_MESSAGE);
     }
 
-    public void motoraInfo() {
-        JOptionPane.showMessageDialog(null, "Motora tilpums: " + motoraTilpums + " litri" + "\n" + "Motora jauda: " + motoraJauda + " zirgspēki" + "\n"
-                + "Motora cilindru skaits: " + cilindri + " cilindri" + "\n" + "Motora veids: " + motoraVeids + "\n"
-                + "Motors ir pielaists: " + (pielaists ? "Jā" : "Nē") + "\n", "Atribūti", JOptionPane.INFORMATION_MESSAGE);
+    @Override
+    public String toString() {
+        return "Motors (tilpums: " + motoraTilpums + "L, jauda: " + motoraJauda + " ZS, cilindri: " + cilindri + ", motora veids: " + motoraVeids + ", motors ir pielaists: "
+                + (pielaists ? "Jā" : "Nē") + ")";
     }
+
 }
