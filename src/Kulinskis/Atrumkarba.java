@@ -4,8 +4,7 @@ import javax.swing.*;
 
 public class Atrumkarba {
     private String veids;
-    private int kopaAtrumi;
-    private int pasreizejaisAtrums;
+    private int kopaAtrumi, pasreizejaisAtrums;
 
     public Atrumkarba(String veids, int kopaAtrumi) {
         this.veids = veids;

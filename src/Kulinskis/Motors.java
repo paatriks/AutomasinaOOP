@@ -17,7 +17,8 @@ public class Motors {
     }
 
     public void pielaistVaiNoslapetMotoru() {
-        int choice = JOptionPane.showOptionDialog(null,"Tu vēlies pielaist vai noslāpēt motoru?","Pielaist vai noslāpēt", JOptionPane.OK_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE,
+        int choice = JOptionPane.showOptionDialog(null,"Tu vēlies pielaist vai noslāpēt motoru?","Pielaist vai noslāpēt",
+                JOptionPane.OK_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE,
                 null, new String[]{"Pielaist", "Noslāpēt"},"default");
 
         if (choice == 0) {

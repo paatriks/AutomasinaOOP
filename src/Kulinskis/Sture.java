@@ -17,7 +17,8 @@ public class Sture {
 
     public void sturet() {
         String[] opcijas = {"pa labi", "pa kreisi"};
-        String ievade = (String) JOptionPane.showInputDialog(null, "Stūrēsi pa labi vai pa kreisi?", "Virziens", JOptionPane.QUESTION_MESSAGE, null, opcijas, opcijas[0]);
+        String ievade = (String) JOptionPane.showInputDialog(null, "Stūrēsi pa labi vai pa kreisi?", "Virziens",
+                JOptionPane.QUESTION_MESSAGE, null, opcijas, opcijas[0]);
         if (ievade != null && !ievade.isEmpty()) {
             JOptionPane.showMessageDialog(null, "Tu izvēlējies stūrēt pa " + ievade, "Virziens", JOptionPane.INFORMATION_MESSAGE);
         }

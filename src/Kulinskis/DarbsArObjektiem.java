@@ -75,6 +75,28 @@ public class DarbsArObjektiem {
     }
 
     static void dzestObjektus() {
+        String[] autoSaraksts = new String[automasinas.size()];
+        String[] autoAtrumkarbas = new String[atrumkarbas.size()];
+        String[] autoMotori = new String[motori.size()];
+        String[] autoRiteni = new String[riteni.size()];
+        String[] autoStures = new String[stures.size()];
 
+        for (int i = 0; i < automasinas.size(); i++) {
+            autoSaraksts[i] = automasinas.get(i).razotajs + " " + automasinas.get(i).modelis;
+        }
+        for (int i = 0; i < atrumkarbas.size(); i++) {
+            autoAtrumkarbas[i] = atrumkarbas.get(i).toString();
+        }
+
+        String ievade = (String) JOptionPane.showInputDialog(null, "Kuru auto dzēsīsi?", "dzēst", JOptionPane.QUESTION_MESSAGE, null, autoSaraksts, autoSaraksts[0]);
+
+        for (int i = 0; i < automasinas.size(); i++) {
+            if ((automasinas.get(i).razotajs + " " + automasinas.get(i).modelis).equalsIgnoreCase(ievade)) {
+                Atrumkarba atrumkarba = automasinas.get(i).atrumkarba;
+                automasinas.remove(i);
+                atrumkarbas.remove(atrumkarba);
+                i--;
+            }
+        }
     }
 }
