@@ -76,10 +76,6 @@ public class DarbsArObjektiem {
     static void dzestObjektus() {
         String[] izvele = {"Automašīnu", "Riteni", "Ātrumkārbu", "Stūri", "Motoru"};
         String[] autoSaraksts = new String[automasinas.size()];
-        String[] autoAtrumkarbas = new String[atrumkarbas.size()];
-        String[] autoStures = new String[stures.size()];
-        String[] autoMotori= new String[motori.size()];
-        String[] autoRiteni = new String[riteni.size()];
 
         String ievade = (String) JOptionPane.showInputDialog(null, "Kuru objektu vēlies dzēst?", "Objektu dzēšana", JOptionPane.QUESTION_MESSAGE, null, izvele, izvele[0]);
         if (ievade == null) return;
@@ -109,92 +105,45 @@ public class DarbsArObjektiem {
                 break;
 
             case "Riteni":
-                if (riteni.isEmpty()) {
-                    JOptionPane.showMessageDialog(null, "Nav izveidots neviens riteņa objekts!", "Kļūda",
-                            JOptionPane.WARNING_MESSAGE);
-                    break;
-                }
-                for (int i = 0; i < riteni.size(); i++) {
-                    autoRiteni[i] = riteni.get(i).toString();
-                }
-                String dzestRiteni = (String) JOptionPane.showInputDialog(null, "Kuru riteni vēlies dzēst no saraksta?", "Riteņu dzēšana",
-                        JOptionPane.QUESTION_MESSAGE, null, autoRiteni, autoRiteni[0]);
-                if (dzestRiteni == null) return;
-
-                for (int i = 0; i < riteni.size(); i++) {
-                    if (riteni.get(i).toString().equals(dzestRiteni)) {
-                        riteni.remove(i);
-                        JOptionPane.showMessageDialog(null, "Ritenis tika izdzēsta no saraksta", "Paziņojums", JOptionPane.INFORMATION_MESSAGE);
-                        break;
-                    }
-                }
+                dzObjektu(riteni);
                 break;
 
             case "Ātrumkārbu":
-                if (atrumkarbas.isEmpty()) {
-                    JOptionPane.showMessageDialog(null, "Nav izveidots neviens ātrumkārbas objekts!", "Kļūda",
-                            JOptionPane.WARNING_MESSAGE);
-                    break;
-                }
-                for (int i = 0; i < atrumkarbas.size(); i++) {
-                    autoAtrumkarbas[i] = atrumkarbas.get(i).toString();
-                }
-                String dzestAtrumkarbu = (String) JOptionPane.showInputDialog(null, "Kuru ātrumkārbu vēlies dzēst no saraksta?", "Ātrumkārbas dzēšana",
-                        JOptionPane.QUESTION_MESSAGE, null,autoAtrumkarbas, autoAtrumkarbas[0]);
-                if (dzestAtrumkarbu == null) return;
-
-                for (int i = 0; i < atrumkarbas.size(); i++) {
-                    if (atrumkarbas.get(i).toString().equals(dzestAtrumkarbu)) {
-                        atrumkarbas.remove(i);
-                        JOptionPane.showMessageDialog(null, "Ātrumkārba tika izdzēsta no saraksta", "Paziņojums", JOptionPane.INFORMATION_MESSAGE);
-                        break;
-                    }
-                }
+                dzObjektu(atrumkarbas);
                 break;
 
             case "Stūri":
-                if (stures.isEmpty()) {
-                    JOptionPane.showMessageDialog(null, "Nav izveidots neviens stūres objekts!", "Kļūda",
-                            JOptionPane.WARNING_MESSAGE);
-                    break;
-                }
-                for (int i = 0; i < stures.size(); i++) {
-                    autoStures[i] = stures.get(i).toString();
-                }
-                String dzestSturi = (String) JOptionPane.showInputDialog(null, "Kuru stūri vēlies dzēst no saraksta?", "Stūres dzēšana",
-                        JOptionPane.QUESTION_MESSAGE, null, autoStures, autoStures[0]);
-                if (dzestSturi == null) return;
-
-                for (int i = 0; i < stures.size(); i++) {
-                    if (stures.get(i).toString().equals(dzestSturi)) {
-                        stures.remove(i);
-                        JOptionPane.showMessageDialog(null, "Stūre tika izdzēsta no saraksta", "Paziņojums", JOptionPane.INFORMATION_MESSAGE);
-                        break;
-                    }
-                }
+                dzObjektu(stures);
                 break;
 
             case "Motoru":
-                if (motori.isEmpty()) {
-                    JOptionPane.showMessageDialog(null, "Nav izveidots neviens motora objekts!", "Kļūda",
-                            JOptionPane.WARNING_MESSAGE);
-                    break;
-                }
-                for (int i = 0; i < motori.size(); i++) {
-                    autoMotori[i] = motori.get(i).toString();
-                }
-                String dzestMotoru = (String) JOptionPane.showInputDialog(null, "Kuru motoru vēlies dzēst no saraksta?", "Motora dzēšana",
-                        JOptionPane.QUESTION_MESSAGE, null, autoMotori, autoMotori[0]);
-                if (dzestMotoru == null) return;
-
-                for (int i = 0; i < motori.size(); i++) {
-                    if (motori.get(i).toString().equals(dzestMotoru)) {
-                        motori.remove(i);
-                        JOptionPane.showMessageDialog(null, "Motors tika izdzēsta no saraksta", "Paziņojums", JOptionPane.INFORMATION_MESSAGE);
-                        break;
-                    }
-                }
+                dzObjektu(motori);
                 break;
+        }
+    }
+
+    static <T> void dzObjektu(ArrayList<T> objekts) {
+        if (objekts.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Nav izveidots neviens šīs klases objekts!", "Kļūda",
+                    JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+        String[] objektaIzvele = new String[objekts.size()];
+
+        for (int i = 0; i < objekts.size(); i++) {
+            objektaIzvele[i] = objekts.get(i).toString();
+        }
+        String dzestObjektu = (String) JOptionPane.showInputDialog(null, "Kuru objektu no saraksta vēlies dzēst?", "Objektu dzēšana",
+                JOptionPane.QUESTION_MESSAGE, null, objektaIzvele, objektaIzvele[0]);
+
+        if (dzestObjektu == null) return;
+
+        for (int i = 0; i < objekts.size(); i++) {
+            if (objekts.get(i).toString().equals(dzestObjektu)) {
+                objekts.remove(i);
+                JOptionPane.showMessageDialog(null, "Objekts tika izdzēsts no saraksta", "Paziņojums", JOptionPane.INFORMATION_MESSAGE);
+                return;
+            }
         }
     }
 }
