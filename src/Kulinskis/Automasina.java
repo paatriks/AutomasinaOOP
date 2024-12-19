@@ -53,9 +53,9 @@ public class Automasina {
     }
 
     public void masinasInfo() {
-        JOptionPane.showMessageDialog(null, "Automašīnas motors: " + this.motors + "\n" + "Automašīnas ritenis: " + this.ritenis + "\n"
+        JOptionPane.showMessageDialog(null, "Automašīnas ražotājs: " + this.razotajs + "\n" + "Automašīnas modelis: " + this.modelis + "\n" + "Automašīnas motors: " + this.motors + "\n" + "Automašīnas ritenis: " + this.ritenis + "\n"
                 + "Automašīnas stūre: " + this.sture + "\n" + "Automašīnas ātrumkārba: " + this.atrumkarba + "\n" + "Automašīnas ātrums: " + this.atrums + " km/h" + "\n"
-                + "Automašīnas svars: " + this.svars + " kg" + "\n" + "Automašīnas ražotājs: " + this.razotajs + "\n" + "Automašīnas modelis: " + this.modelis + "\n", "Atribūti", JOptionPane.INFORMATION_MESSAGE);
+                + "Automašīnas svars: " + this.svars + " kg" + "\n", "Atribūti", JOptionPane.INFORMATION_MESSAGE);
     }
 
 }

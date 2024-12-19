@@ -45,7 +45,10 @@ public class Autoserviss {
         DarbsArObjektiem.apskatitObjektus();
         DarbsArObjektiem.dzestObjektus();
         DarbsArObjektiem.apskatitObjektus();
-
+        DarbsArFailu.saglabatFaila(masina);
+        DarbsArFailu.saglabatFaila(masina1);
+        DarbsArFailu.saglabatFaila(masina2);
+        DarbsArFailu.apskatitFailu();
 
     }
 }

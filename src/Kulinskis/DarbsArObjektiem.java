@@ -105,24 +105,24 @@ public class DarbsArObjektiem {
                 break;
 
             case "Riteni":
-                dzObjektu(riteni);
+                dzest(riteni);
                 break;
 
             case "Ātrumkārbu":
-                dzObjektu(atrumkarbas);
+                dzest(atrumkarbas);
                 break;
 
             case "Stūri":
-                dzObjektu(stures);
+                dzest(stures);
                 break;
 
             case "Motoru":
-                dzObjektu(motori);
+                dzest(motori);
                 break;
         }
     }
 
-    static <T> void dzObjektu(ArrayList<T> objekts) {
+    static <T> void dzest(ArrayList<T> objekts) {
         if (objekts.isEmpty()) {
             JOptionPane.showMessageDialog(null, "Nav izveidots neviens šīs klases objekts!", "Kļūda",
                     JOptionPane.WARNING_MESSAGE);
