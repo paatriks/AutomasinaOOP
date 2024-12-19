@@ -1,11 +1,11 @@
-Automašīnas ražotājs: Buggati
-Automašīnas modelis: Chiron
-Automašīnas motors: Motors (tilpums: 6.0L, jauda: 900 ZS, cilindri: 12, motora veids: benzīns, motors ir pielaists: Nē)
-Automašīnas ritenis: Ritenis (diametrs: 21 ", riepu spiediens: 30 psi, riepu tips: Ziemas, riepu ražotājs: Continental, automašīnai ir tikuši nomainīti riteņi: Nē)
-Automašīnas stūre: Stūre (materiāls: Gumija, diametrs: 30cm, pogu skaits: 10, stūre ir regulējama: Jā, stūrei ir apsilde: Jā)
-Automašīnas ātrumkārba: Ātrumkārba (veids: automats, kopā ātrumi: 8, pašreizējais ātrums: 1. ātrums)
-Automašīnas ātrums: 105 km/h
-Automašīnas svars: 2100 kg
+Automašīnas ražotājs: Mini
+Automašīnas modelis: Cooper
+Automašīnas motors: Motors (tilpums: 1.6L, jauda: 122 ZS, cilindri: 4, motora veids: benzīns, motors ir pielaists: Jā)
+Automašīnas ritenis: Ritenis (diametrs: 16 ", riepu spiediens: 40 psi, riepu tips: Vissezonas, riepu ražotājs: Michelin, automašīnai ir tikuši nomainīti riteņi: Nē)
+Automašīnas stūre: Stūre (materiāls: Gumija, diametrs: 30cm, pogu skaits: 4, stūre ir regulējama: Nē, stūrei ir apsilde: Nē)
+Automašīnas ātrumkārba: Ātrumkārba (veids: manual, kopā ātrumi: 5, pašreizējais ātrums: 1. ātrums)
+Automašīnas ātrums: 56 km/h
+Automašīnas svars: 1570 kg
 
 Automašīnas ražotājs: BMW
 Automašīnas modelis: 320D
@@ -15,13 +15,4 @@ Automašīnas stūre: Stūre (materiāls: Gumija, diametrs: 30cm, pogu skaits: 4
 Automašīnas ātrumkārba: Ātrumkārba (veids: manual, kopā ātrumi: 6, pašreizējais ātrums: 1. ātrums)
 Automašīnas ātrums: 34 km/h
 Automašīnas svars: 1840 kg
-
-Automašīnas ražotājs: Mini
-Automašīnas modelis: Cooper
-Automašīnas motors: Motors (tilpums: 1.6L, jauda: 122 ZS, cilindri: 4, motora veids: benzīns, motors ir pielaists: Jā)
-Automašīnas ritenis: Ritenis (diametrs: 16 ", riepu spiediens: 40 psi, riepu tips: Vissezonas, riepu ražotājs: Michelin, automašīnai ir tikuši nomainīti riteņi: Nē)
-Automašīnas stūre: Stūre (materiāls: Gumija, diametrs: 30cm, pogu skaits: 4, stūre ir regulējama: Nē, stūrei ir apsilde: Nē)
-Automašīnas ātrumkārba: Ātrumkārba (veids: manual, kopā ātrumi: 5, pašreizējais ātrums: 1. ātrums)
-Automašīnas ātrums: 56 km/h
-Automašīnas svars: 1570 kg
 

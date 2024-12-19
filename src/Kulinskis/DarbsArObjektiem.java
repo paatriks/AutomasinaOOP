@@ -2,6 +2,7 @@ package Kulinskis;
 
 import javax.swing.*;
 import java.util.ArrayList;
+import java.util.regex.Pattern;
 
 public class DarbsArObjektiem {
     static ArrayList<Atrumkarba> atrumkarbas = new ArrayList<>();
@@ -145,5 +146,21 @@ public class DarbsArObjektiem {
                 return;
             }
         }
+    }
+
+    static void izveidotObjektu() {
+
+    }
+
+    static String virknesParbaude(String zinojums, String noklusejuma) {
+        String virkne;
+        do {
+            virkne = JOptionPane.showInputDialog(zinojums, noklusejuma);
+
+            if (virkne == null) return null;
+            virkne = virkne.trim();
+
+        } while (!Pattern.matches("^[a-zA-ZāčēģīķļņšūžĀČĢĪĶĻŅŠŪŽ]+$", virkne));
+        return virkne;
     }
 }

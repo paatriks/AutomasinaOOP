@@ -42,13 +42,8 @@ public class Autoserviss {
         String[] darbibuSaraksts = {"Izveidot jaunu automašīnas objektu", "Izveidot motora objektu", "Izveidot jaunu ātrumkārbas objektu", "Izveidot jaunu riteņa objektu",
                 "Izveidot jaunu stūres objektu", "Saglabāt failā", "Dzēst objektu no saraksta", "Aplūkot objektus", "Izsaukt metodi uz objektu", "Aizvērt"};
 
-        DarbsArObjektiem.apskatitObjektus();
-        DarbsArObjektiem.dzestObjektus();
-        DarbsArObjektiem.apskatitObjektus();
-        DarbsArFailu.saglabatFaila(masina);
-        DarbsArFailu.saglabatFaila(masina1);
-        DarbsArFailu.saglabatFaila(masina2);
-        DarbsArFailu.apskatitFailu();
+
+        Gui.createGui();
 
     }
 }
