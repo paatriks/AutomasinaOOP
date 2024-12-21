@@ -13,7 +13,7 @@ public class Autoserviss {
         DarbsArObjektiem.stures.add(sture);
         Automasina masina = new Automasina(motors, ritenis, sture, atrumkarba, 105, 2100, "Buggati", "Chiron");
         DarbsArObjektiem.automasinas.add(masina);
-        masina.masinasInfo();
+        //masina.masinasInfo();
 
         Atrumkarba atrumkarba1 = new Atrumkarba("manual", 6);
         DarbsArObjektiem.atrumkarbas.add(atrumkarba1);
@@ -25,7 +25,7 @@ public class Autoserviss {
         DarbsArObjektiem.stures.add(sture1);
         Automasina masina1 = new Automasina(motors1, ritenis1, sture1, atrumkarba1, 34, 1840, "BMW", "320D");
         DarbsArObjektiem.automasinas.add(masina1);
-        masina1.masinasInfo();
+        //masina1.masinasInfo();
 
         Atrumkarba atrumkarba2 = new Atrumkarba("manual", 5);
         DarbsArObjektiem.atrumkarbas.add(atrumkarba2);
@@ -37,7 +37,7 @@ public class Autoserviss {
         DarbsArObjektiem.stures.add(sture2);
         Automasina masina2 = new Automasina(motors2, ritenis2, sture2, atrumkarba2, 56, 1570, "Mini", "Cooper");
         DarbsArObjektiem.automasinas.add(masina2);
-        masina2.masinasInfo();
+        //masina2.masinasInfo();
 
         String[] darbibuSaraksts = {"Izveidot jaunu automašīnas objektu", "Izveidot motora objektu", "Izveidot jaunu ātrumkārbas objektu", "Izveidot jaunu riteņa objektu",
                 "Izveidot jaunu stūres objektu", "Saglabāt failā", "Dzēst objektu no saraksta", "Aplūkot objektus", "Izsaukt metodi uz objektu", "Aizvērt"};
