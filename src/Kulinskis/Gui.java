@@ -72,7 +72,7 @@ public class Gui {
         poga6.setMargin(new Insets(6, 10, 6, 10));
         poga6.setFocusPainted(false);
         poga6.setMargin(new Insets(6, 10, 6, 10));
-        poga6.addActionListener(e -> DarbsArFailu.saglabatFaila());
+        poga6.addActionListener(e -> DarbsArObjektiem.izveidotObjektu());
 
         pogasPanel3.add(poga5);
         pogasPanel3.add(poga6);

@@ -1,6 +1,7 @@
 package Kulinskis;
 
 import javax.swing.*;
+import java.time.Year;
 import java.util.ArrayList;
 import java.util.regex.Pattern;
 
@@ -149,7 +150,109 @@ public class DarbsArObjektiem {
     }
 
     static void izveidotObjektu() {
+        String[] izvele = {"Ātrumkārbu", "Motoru", "Riteni", "Stūri", "Automašīnu"};
+        String ievade = (String) JOptionPane.showInputDialog(null, "Kuru objektu veidosi?", "Objektu izveide", JOptionPane.QUESTION_MESSAGE,
+                null, izvele, izvele[0]);
 
+        switch (ievade) {
+            case "Ātrumkārbu":
+                String veids;
+                int kopaAtrumi, pasreizejaisAtrums = 1;
+
+                veids = virknesParbaude("Norādi ātrumkārbas veidu", "Manuālā");
+                kopaAtrumi = skaitlaParbaude("Norādi ātrumu skaitu", 1, 8);
+
+                Atrumkarba atrumkarba = new Atrumkarba(veids, kopaAtrumi);
+                atrumkarbas.add(atrumkarba);
+
+                JOptionPane.showMessageDialog(null, "Ātrumkārbas objekts veiksmīgi izveidots!", "Paziņojums", JOptionPane.INFORMATION_MESSAGE);
+                break;
+
+            case "Motoru":
+                double motoraTilpums;
+                int motoraJauda, cilindri;
+                String motoraVeids;
+                boolean pielaists;
+
+                motoraTilpums = skaitlaParbaude("Norādi motora tilpumu (litri)", 0.5, 6.0);
+                motoraJauda = skaitlaParbaude("Norādi motora jaudu (ZS)", 50, 1500);
+                cilindri = skaitlaParbaude("Norādi cilindru skaitu (ZS)", 3, 16);
+                motoraVeids = virknesParbaude("Norādi motora veidu (benzīns vai dīzelis)", "benzīns");
+                pielaists = irVaiNav("Vai motors ir pielaists?", "Jā");
+
+                Motors motors = new Motors(motoraTilpums, motoraJauda, cilindri, motoraVeids, pielaists);
+                motori.add(motors);
+
+                JOptionPane.showMessageDialog(null, "Motora objekts veiksmīgi izveidots!", "Paziņojums", JOptionPane.INFORMATION_MESSAGE);
+                break;
+
+            case "Riteni":
+                int diametrs, spiediens;
+                String riepasTips, riepuRazotajs;
+                boolean jaunsRitenis = false;
+
+                diametrs = skaitlaParbaude("Norādi riteņa diametru (collas)", 15, 22);
+                spiediens = skaitlaParbaude("Norādi rieapas spiedienu (psi)", 20, 50);
+                riepasTips = virknesParbaude("Norādi riepas tipu (vasaras, ziemas vai vissezonas)", "ziemas");
+                riepuRazotajs = virknesParbaude("Norādi riepas ražotāju", "Michelin");
+
+                Ritenis ritenis = new Ritenis(diametrs, spiediens, riepasTips, riepuRazotajs);
+                riteni.add(ritenis);
+
+                JOptionPane.showMessageDialog(null, "Riteņa objekts veiksmīgi izveidots!", "Paziņojums", JOptionPane.INFORMATION_MESSAGE);
+                break;
+
+            case "Stūri":
+                String materials;
+                boolean irApsilde, irRegulejama;
+                int poguSkaits, sturesDiametrs;
+
+                materials = virknesParbaude("Norādi stūres materiālu", "Poliuretāns");
+                irApsilde = irVaiNav("Vai stūrei ir apsilde?", "Jā");
+                irRegulejama = irVaiNav("Vai stūre ir regulējama?", "Jā");
+                poguSkaits = skaitlaParbaude("Norādi pogu skaitu uz stūres", 2, 15);
+                sturesDiametrs = skaitlaParbaude("Norādi stūres diametru (cm)", 35, 45);
+
+                Sture sture = new Sture(materials, irApsilde, irRegulejama, poguSkaits, sturesDiametrs);
+                stures.add(sture);
+
+                JOptionPane.showMessageDialog(null, "Stūres objekts veiksmīgi izveidots!", "Paziņojums", JOptionPane.INFORMATION_MESSAGE);
+                break;
+
+            case "Automašīnu":
+
+                if (atrumkarbas.isEmpty() || motori.isEmpty() || riteni.isEmpty() || stures.isEmpty()) {
+                    ArrayList<String> autodetalas = new ArrayList<>();
+
+                    if (atrumkarbas.isEmpty()) autodetalas.add("Ātrumkārba");
+                    if (motori.isEmpty()) autodetalas.add("Motors");
+                    if (riteni.isEmpty()) autodetalas.add("Ritenis");
+                    if (stures.isEmpty()) autodetalas.add("Stūre");
+
+                    String missing = String.join(", ", autodetalas);
+
+                    JOptionPane.showMessageDialog(null, "Nevar izveidot automašīnu! Trūkst sekojošās detaļas: " + missing, "Trūkst detaļas", JOptionPane.ERROR_MESSAGE);
+                    return;
+                }
+
+                int atrums, svars;
+                String razotajs, modelis;
+                Motors autoMotors = motori.getLast();
+                Ritenis autoRitenis = riteni.getLast();
+                Sture autoSture = stures.getLast();
+                Atrumkarba autoAtrumkarba = atrumkarbas.getLast();
+
+                atrums = skaitlaParbaude("Norādi automašīnas ātrumu (km/h)", 1, 110);
+                svars = skaitlaParbaude("Norādi automašīnas svaru (kg)", 1000, 9000);
+                razotajs = virknesParbaude("Norādi automašīnas ražotāju", "Audi");
+                modelis = virknesParbaude("Norādi automašīnas modeli", "A6");
+
+                Automasina masina = new Automasina(autoMotors, autoRitenis, autoSture, autoAtrumkarba, atrums, svars, razotajs, modelis);
+                automasinas.add(masina);
+
+                JOptionPane.showMessageDialog(null, "Automašīnas objekts veiksmīgi izveidots!", "Paziņojums", JOptionPane.INFORMATION_MESSAGE);
+                break;
+        }
     }
 
     static String virknesParbaude(String zinojums, String noklusejuma) {
@@ -162,5 +265,37 @@ public class DarbsArObjektiem {
 
         } while (!Pattern.matches("^[a-zA-ZāčēģīķļņšūžĀČĢĪĶĻŅŠŪŽ]+$", virkne));
         return virkne;
+    }
+
+    static int skaitlaParbaude(String zinojums, int min, int max) {
+        String ievade;
+        int skaitlis;
+
+        while (true) {
+            ievade = JOptionPane.showInputDialog(null, zinojums, "Datu ievade", JOptionPane.INFORMATION_MESSAGE);
+
+            if (ievade == null) return -1;
+
+            try {
+                skaitlis = Integer.parseInt(ievade);
+                if (skaitlis < min || skaitlis > max) continue;
+                return skaitlis;
+            } catch (NumberFormatException e) {
+                JOptionPane.showMessageDialog(null, "Netika ievadīts skaitlis!", "Nekorekti dati", JOptionPane.ERROR_MESSAGE);
+            }
+        }
+    }
+
+    static boolean irVaiNav(String zinojums, String noklusejuma) {
+        String atbilde;
+        boolean javaine;
+        do {
+            atbilde = JOptionPane.showInputDialog(null, zinojums, noklusejuma);
+
+            if (atbilde.equalsIgnoreCase("Jā")) javaine = true;
+            else javaine = false;
+
+        } while (!atbilde.equalsIgnoreCase("Jā") && !atbilde.equalsIgnoreCase("Nē"));
+        return javaine;
     }
 }

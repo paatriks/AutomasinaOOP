@@ -3,7 +3,7 @@ package Kulinskis;
 public class Autoserviss {
     public static void main(String[] args) {
 
-        Atrumkarba atrumkarba = new Atrumkarba("automats", 8);
+        /*Atrumkarba atrumkarba = new Atrumkarba("automats", 8);
         DarbsArObjektiem.atrumkarbas.add(atrumkarba);
         Motors motors = new Motors(6.0, 900, 12, "benzīns", false);
         DarbsArObjektiem.motori.add(motors);
@@ -36,7 +36,7 @@ public class Autoserviss {
         Sture sture2 = new Sture("Gumija", false, false, 4, 30);
         DarbsArObjektiem.stures.add(sture2);
         Automasina masina2 = new Automasina(motors2, ritenis2, sture2, atrumkarba2, 56, 1570, "Mini", "Cooper");
-        DarbsArObjektiem.automasinas.add(masina2);
+        DarbsArObjektiem.automasinas.add(masina2);*/
         //masina2.masinasInfo();
 
         String[] darbibuSaraksts = {"Izveidot jaunu automašīnas objektu", "Izveidot motora objektu", "Izveidot jaunu ātrumkārbas objektu", "Izveidot jaunu riteņa objektu",
