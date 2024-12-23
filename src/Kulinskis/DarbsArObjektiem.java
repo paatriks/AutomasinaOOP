@@ -1,7 +1,6 @@
 package Kulinskis;
 
 import javax.swing.*;
-import java.time.Year;
 import java.util.ArrayList;
 import java.util.regex.Pattern;
 
@@ -152,7 +151,7 @@ public class DarbsArObjektiem {
     static void izveidotObjektu() {
         String[] izvele = {"Ātrumkārbu", "Motoru", "Riteni", "Stūri", "Automašīnu"};
 
-        String ievade = null;
+        String ievade;
         do {
             ievade = (String) JOptionPane.showInputDialog(null, "Kuru objektu veidosi?", "Objektu izveide", JOptionPane.QUESTION_MESSAGE,
                     null, izvele, izvele[0]);
