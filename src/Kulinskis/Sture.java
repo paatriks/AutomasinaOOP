@@ -16,12 +16,11 @@ public class Sture {
     }
 
     public void sturet() {
-        String[] opcijas = {"pa labi", "pa kreisi"};
-        String ievade = (String) JOptionPane.showInputDialog(null, "Stūrēsi pa labi vai pa kreisi?", "Virziens",
-                JOptionPane.QUESTION_MESSAGE, null, opcijas, opcijas[0]);
-        if (ievade != null && !ievade.isEmpty()) {
-            JOptionPane.showMessageDialog(null, "Tu izvēlējies stūrēt pa " + ievade, "Virziens", JOptionPane.INFORMATION_MESSAGE);
-        }
+        int choice = JOptionPane.showOptionDialog(null,"Uz kuru pusi stūrēsi?","Stūrēt", JOptionPane.OK_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE,
+                null, new String[]{"Pa labi", "Pa kreisi"},"default");
+        if (choice == 0) JOptionPane.showMessageDialog(null, "Tu stūrē pa labi", "Stūrēšana", JOptionPane.INFORMATION_MESSAGE);
+        else if (choice == 1) JOptionPane.showMessageDialog(null, "Tu stūrē pa kreisi", "Stūrēšana", JOptionPane.INFORMATION_MESSAGE);
+        else JOptionPane.showMessageDialog(null, "Nekas netika izvēlēts!", "Kļūda", JOptionPane.ERROR_MESSAGE);
     }
 
     public void nospiestPogu () {

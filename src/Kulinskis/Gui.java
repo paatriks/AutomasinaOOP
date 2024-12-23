@@ -28,7 +28,7 @@ public class Gui {
         pogasPanel3.setBorder(BorderFactory.createTitledBorder(BorderFactory.createLineBorder(Color.lightGray, 2),"Izveidot automašīnas objektu"));
 
         pogasPanel1.setLayout(new GridLayout(2, 1,0 , 6));
-        pogasPanel2.setLayout(new GridLayout(2, 1,0 , 6));
+        pogasPanel2.setLayout(new GridLayout(3, 1,0 , 6));
         pogasPanel3.setLayout(new GridLayout(2, 1,0 , 6));
 
         JButton poga1 = new JButton("Saglabāt automašīnas objektu failā");
@@ -58,24 +58,31 @@ public class Gui {
         poga4.setFocusPainted(false);
         poga4.addActionListener(e -> DarbsArObjektiem.dzestObjektus());
 
-        pogasPanel2.add(poga3);
-        pogasPanel2.add(poga4);
-
-        JButton poga5 = new JButton("Izveidot automašīnas objektu ar esošām detļām");
+        JButton poga5 = new JButton("Izsaukt metodi uz objekta");
         poga5.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         poga5.setMargin(new Insets(6, 10, 6, 10));
         poga5.setFocusPainted(false);
-        poga5.addActionListener(e -> DarbsArFailu.saglabatFaila());
+        poga5.addActionListener(e -> DarbsArObjektiem.izsauktMetodi());
 
-        JButton poga6 = new JButton("Izveidot automašīnas objektu no jauna");
+        pogasPanel2.add(poga3);
+        pogasPanel2.add(poga4);
+        pogasPanel2.add(poga5);
+
+        JButton poga6 = new JButton("Izveidot automašīnas objektu ar esošām detaļām");
         poga6.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         poga6.setMargin(new Insets(6, 10, 6, 10));
         poga6.setFocusPainted(false);
-        poga6.setMargin(new Insets(6, 10, 6, 10));
-        poga6.addActionListener(e -> DarbsArObjektiem.izveidotObjektu());
+        poga6.addActionListener(e -> DarbsArFailu.saglabatFaila());
 
-        pogasPanel3.add(poga5);
+        JButton poga7 = new JButton("Izveidot automašīnas objektu no jauna");
+        poga7.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+        poga7.setMargin(new Insets(6, 10, 6, 10));
+        poga7.setFocusPainted(false);
+        poga7.setMargin(new Insets(6, 10, 6, 10));
+        poga7.addActionListener(e -> DarbsArObjektiem.izveidotObjektu());
+
         pogasPanel3.add(poga6);
+        pogasPanel3.add(poga7);
 
         panel.add(pogasPanel1);
         panel.add(pogasPanel2);
