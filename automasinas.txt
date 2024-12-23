@@ -16,3 +16,12 @@ Automašīnas ātrumkārba: Ātrumkārba (veids: Automāts, kopā ātrumi: 6, pa
 Automašīnas ātrums: 107 km/h
 Automašīnas svars: 2150 kg
 
+Automašīnas ražotājs: Ferrari
+Automašīnas modelis: F8
+Automašīnas motors: Motors (tilpums: 5.0L, jauda: 800 ZS, cilindri: 12, motora veids: benzīns, motors ir pielaists: Nē)
+Automašīnas ritenis: Ritenis (diametrs: 22 ", riepu spiediens: 30 psi, riepu tips: vasarenes, riepu ražotājs: Sailun, automašīnai ir tikuši nomainīti riteņi: Nē)
+Automašīnas stūre: Stūre (materiāls: Poliuretāns, diametrs: 35cm, pogu skaits: 15, stūre ir regulējama: Jā, stūrei ir apsilde: Nē)
+Automašīnas ātrumkārba: Ātrumkārba (veids: Automāts, kopā ātrumi: 6, pašreizējais ātrums: 2. ātrums)
+Automašīnas ātrums: 103 km/h
+Automašīnas svars: 1780 kg
+
