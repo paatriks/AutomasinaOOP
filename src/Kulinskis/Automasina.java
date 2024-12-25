@@ -21,12 +21,6 @@ public class Automasina {
         this.modelis = modelis;
     }
 
-    public Automasina() {
-//        motors = new Motors(virknesParbaude());
-//        ritenis = new Ritenis(virknesParbaude());
-//        sture = new Sture(virknesParbaude());
-    }
-
     public void spiestGazi() {
         String ievade;
         int skaitlis;
